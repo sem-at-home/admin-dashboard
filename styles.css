@@ -1,0 +1,66 @@
+.container {
+  display: grid;
+  grid-template-areas: 
+    "sidebar header"
+    "sidebar main";
+  grid-template-columns: 200px 1fr;
+}
+
+.sidebar {
+  background-color: lightblue;
+  color: white;
+  font-size: x-large;
+  font-weight: bolder;
+  grid-area: sidebar;
+}
+
+.header {
+  display: grid;
+  grid-area: header;
+  grid-template-columns: 2fr 1fr;
+}
+
+.header-buttons {
+  align-items: center;
+  display: flex;
+  /* gap: 20px; */
+  justify-content: space-around;
+}
+
+.main {
+  background-color: lightgray;
+  display: grid;
+  gap: 10px;
+  grid-area: main;
+  grid-template-columns: 3fr 1fr;
+}
+
+.projects {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.project-header {
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.project,
+.trending,
+.announcements {
+  background-color: whitesmoke;
+}
+
+.project {
+  padding: 10px;
+}
+
+.announcements {
+  display: grid;
+}
+
+.trending-item {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
