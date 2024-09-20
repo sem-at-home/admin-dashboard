@@ -1,23 +1,39 @@
 .container {
   display: grid;
+  font-family: Arial, Helvetica, sans-serif;
   grid-template-areas: 
     "sidebar header"
     "sidebar main";
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 300px 1fr;
 }
 
 .sidebar {
-  background-color: lightblue;
+  background-color: #3b82f6;
   color: white;
   font-size: x-large;
   font-weight: bolder;
   grid-area: sidebar;
 }
 
+.sidebar-header,
+.menu-item,
+.option-item {
+  align-items: center;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 4fr;
+  padding: 15px;
+}
+
+.sidebar-options {
+  padding-top: 100px;
+}
+
 .header {
   display: grid;
   grid-area: header;
   grid-template-columns: 2fr 1fr;
+  padding: 20px;
 }
 
 .header-buttons {
@@ -33,12 +49,21 @@
   gap: 10px;
   grid-area: main;
   grid-template-columns: 3fr 1fr;
+  padding: 20px;
 }
 
 .projects {
   display: grid;
   gap: 15px;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.projects-header,
+.announcements-header,
+.trending-header {
+  font-size: x-large;
+  font-weight: bolder;
+  padding-bottom: 10px;
 }
 
 .project-header {
@@ -54,13 +79,42 @@
 
 .project {
   padding: 10px;
+  border-left: 10px solid #fcd34d;
+}
+
+.main-column-2 {
+  display: grid;
+  gap: 30px;
 }
 
 .announcements {
   display: grid;
+  padding: 10px;
 }
 
 .trending-item {
   display: grid;
   grid-template-columns: 1fr 3fr;
+}
+
+.sidebar-icon,
+.sidebar-header-icon {
+  filter: invert(100);
+  justify-self: center;
+}
+
+.avatar-small {
+  height: 40px;
+}
+
+.avatar {
+  height: 60px;
+}
+
+.page-icon, .sidebar-icon {
+  height: 30px;
+}
+
+.sidebar-header-icon {
+  height: 50px;
 }
