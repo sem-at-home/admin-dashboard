@@ -39,6 +39,7 @@ hr {
 
 .header {
   display: grid;
+  row-gap: 30px;
   grid-area: header;
   grid-template-columns: 2fr 1fr;
   padding: 10px;
@@ -72,19 +73,33 @@ hr {
 }
 
 .current-user {
+  font-size: 20px;
+  font-weight: 900;
   gap: 50px;
   grid-template-columns: 10px 20px 200px;
   justify-content: end;
 }
 
+.searchbar,
 .welcome {
-grid-template-columns: 200px 400px 1fr;
+  margin-left: 30px;
+}
+
+.welcome {
+  font-weight: bolder;
+  grid-template-columns: 70px 400px 1fr;
+  justify-content: start;
+}
+
+.user-name {
+  font-size: x-large;
 }
 
 .header-buttons {
   gap: 40px;
   grid-auto-flow: column;
   justify-content: end;
+  margin-right: 30px;
 }
 
 .header-button {
